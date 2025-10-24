@@ -54,6 +54,9 @@ impl Game {
     }
 
     pub fn next_turn(&mut self, indexu: usize){
+        if self.board.cells[indexu] != Cell::Empty || self.state != State::InProgress {
+            return; // Cell already occupi
+        }
         if self.turn == Cell::X {
              self.board.change_cell(indexu,Cell::X);
              self.turn = Cell::O;

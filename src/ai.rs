@@ -3,7 +3,7 @@ use crate::game::State;
 use crate::board::Cell;
 
 //  if ismax true then we'll assume we'll playing as X otherwise O
-pub fn minimax(_game: Game, ismax: bool) -> (i8, Option<usize>) {
+pub fn minimax(_game: &Game, ismax: bool) -> (i8, Option<usize>) {
     if _game.state == State::Draw {
         return (0, None);
     } else if _game.state == State::Win(Cell::X) {
@@ -19,7 +19,7 @@ pub fn minimax(_game: Game, ismax: bool) -> (i8, Option<usize>) {
     for index in moves {
         let mut new_game: Game = _game.clone();
         new_game.next_turn(index);
-        let (score, _) = minimax(new_game, !ismax);
+        let (score, _) = minimax(&new_game, !ismax);
         
         if (ismax && score > best_score) || (!ismax && score < best_score) {
             best_score = score;
