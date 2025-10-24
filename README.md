@@ -13,12 +13,12 @@ This project is a Tic-Tac-Toe game implemented in Rust using the Macroquad libra
 - Macroquad library
 
 ## Setup
-1. Clone the repository:
-   git clone <repo-url>
-2. Navigate to the project directory:
-   cd tic-tac-toe-ai
-3. Build and run the project:
-   cargo run
+
+```bash
+git clone https://github.com/trfhgx/tic-tac-toe-ai
+cd tic-tac-toe-ai
+cargo run
+```
 
 ## Project Structure
 - `src/main.rs`: Entry point and game loop
