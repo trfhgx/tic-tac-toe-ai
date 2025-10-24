@@ -1,16 +1,18 @@
 # Tic-Tac-Toe AI
 
-This project is a Tic-Tac-Toe game implemented in Rust using the Macroquad library for graphics. The game features a playable board and basic game logic, with support for player turns and win/draw detection.
+A Tic-Tac-Toe game in Rust with an optimal AI opponent, built using Macroquad for graphics.
 
 ## Features
-- Interactive Tic-Tac-Toe board
-- Player vs AI logic (work in progress)
-- Win and draw state detection
-- Simple graphical interface using Macroquad
+- Menu to select game mode: Human vs Human or Human vs AI
+- For AI mode, choose to play as X or O
+- AI uses minimax algorithm for perfect play
+- Win/draw detection and game state management
+- Restart game or return to menu after completion
+- Simple, responsive graphical interface
 
 ## Requirements
-- Rust (latest stable version recommended)
-- Macroquad library
+- Rust (latest stable version)
+- Macroquad library (installed via Cargo)
 
 ## Setup
 
@@ -21,9 +23,10 @@ cargo run
 ```
 
 ## Project Structure
-- `src/main.rs`: Entry point and game loop
-- `src/board.rs`: Board representation and logic
-- `src/game.rs`: Game state and rules
+- `src/main.rs`: Main game loop, GUI, and state management
+- `src/board.rs`: Board data structure and utilities
+- `src/game.rs`: Game logic and rules
+- `src/ai.rs`: Minimax AI implementation
 
 ## License
-This project is licensed under the MIT License.
+MIT License
